@@ -1,46 +1,72 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #0A192F; /* Dark blue background for overall body */
+    color: #FFFFFF; /* White text color */
 }
 
 header {
-    background-color: #f8f9fa;
+    background-color: #112240; /* A slightly different dark blue for the header */
+    color: #FFFFFF;
     padding: 20px;
     text-align: center;
     position: fixed;
     top: 0;
     width: 100%;
-    transition: top 0.3s;
     z-index: 1000;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #007bff;
+    color: #FFFFFF;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #64ffda; /* Light teal for hover effect */
 }
 
 section {
-    padding: 20px;
+    padding: 60px 10%;
+    margin-top: 60px; /* To account for fixed header */
+}
+
+/* Alternating section background colors */
+section:nth-of-type(odd) {
+    background-color: #112240; /* Dark blue for odd sections */
+}
+
+section:nth-of-type(even) {
+    background-color: #0A192F; /* Even darker blue for even sections */
+}
+
+.project-card, .project-card a {
+    background-color: #0A192F; /* Ensuring project cards and links fit the color scheme */
+    color: #FFFFFF;
+    border-color: #2c2c2c; /* Slight border color for differentiation */
 }
 
 footer {
-    background-color: #f8f9fa;
+    background-color: #112240;
+    color: #FFFFFF;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
+}
+
+a:hover {
+    color: #64ffda; /* Adjust the color to fit the design */
 }
 
 .projects-container {
