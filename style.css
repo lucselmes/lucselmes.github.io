@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fbfff1; 
-    color: #3c3744; /* Off-white text color */
+    color: #3c3744;
 }
 
 header {
@@ -122,6 +122,7 @@ a:hover {
     flex: 0 0 200px; /* Adjust the fixed size as needed */
     height: 200px; /* Ensure the container has a defined height */
     margin-right: 20px; /* Space between the profile picture and the bio box */
+    margin-left: 20px;
     border-radius: 50%;
     overflow: hidden;
     position: relative; /* Keep it relative if it doesn't need to be absolutely positioned */
@@ -138,13 +139,14 @@ a:hover {
     border-radius: 50%; /* Ensures the image itself is also circular, matching the container */
 }
 
-
 .bio-box {
     flex: 1;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds readability background to the bio */
+    background-color: #fbfff1c8; /* Optional: Adds readability background to the bio */
+    color: #3c3744;
     border-radius: 8px; /* Optional: Rounds the corners of the bio box */
     padding: 0 20px;
-    max-width: 600px; /* Adjust width as needed */
+    margin-left: 20px;
+    max-width: 700px; /* Adjust width as needed */
 }
 
 .projects-container {
