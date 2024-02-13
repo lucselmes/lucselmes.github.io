@@ -1,9 +1,7 @@
 
 /* Color palette
 #3c3744
-#090c9b
-#3066be
-#b4c5e4
+#284b63
 #fbfff1
 */
 body {
@@ -43,28 +41,16 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #b4c5e4;
+    color: #9a989d;
 }
 
 section {
     padding: 60px 10%;
     margin-top: 60px; /* To account for fixed header */
+    background-color: #fbfff1;
 }
 
-/* Alternating section background colors */
-section:nth-of-type(odd) {
-    background-color: #b4c5e4;
-}
 
-section:nth-of-type(even) {
-    background-color: #3066be; 
-}
-
-.project-card, .project-card a {
-    background-color: #b4c5e4; /* Ensuring project cards and links fit the color scheme */
-    color: #fbfff1;
-    border-color: #d2dbed; /* Slight border color for differentiation */
-}
 
 footer {
     background-color: #3c3744;
@@ -73,31 +59,113 @@ footer {
     padding: 20px;
 }
 
+footer a {
+    color: #fbfff1; /* A light blue color for links for a pop of color */
+    text-decoration: none; /* Optional: removes underline from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Optional: adds an underline on hover for interactivity */
+}
+
 a:hover {
-    color: #64ffda; /* Adjust the color to fit the design */
+    color: #9a989d; /* Adjust the color to fit the design */
+}
+
+#about {
+    position: relative;
+    color: white;
+    text-align: left;
+    padding: 100px 0; /* This ensures some height, adjust as needed */
+    overflow: hidden; /* Clips the pseudo-element to the section's bounds */
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/background-image.jpg') no-repeat center center / cover;
+    filter: grayscale(50%) brightness(50%);
+}
+
+.content-container, .profile-picture, .bio-box {
+    position: relative;
+    z-index: 1; /* Ensures content is above the background */
+}
+
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+}
+
+.about-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/background-image.jpg') no-repeat center center;
+    background-size: covert;
+    filter: grayscale(15%); /* Greys out the background image */
+    opacity: 0.5; /* Adjust for desired transparency level */
+    z-index: -1; /* Ensures the background is behind the content */
+}
+
+.profile-picture {
+    float: left;
+    width: 250px; /* Adjust size as needed */
+    height: 250px;
+    border-radius: 50%;
+    background: url('images/profile-picture.jpg') no-repeat center center;
+    background-size: cover;
+    margin-right: 20px; /* Adjust spacing between profile picture and bio box */
+    margin-left: 100px;
+}
+
+.bio-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds readability background to the bio */
+    border-radius: 8px; /* Optional: Rounds the corners of the bio box */
+    padding: 20px;
+    max-width: 600px; /* Adjust width as needed */
 }
 
 .projects-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* This will evenly space your project cards */
-    gap: 20px; /* Adjust the gap between cards */
+    color: #fbfff1;
+    justify-content: center; /* Adjusted for tighter alignment */
+    gap: 50px; /* Reduced gap for tighter spacing */
 }
 
 .project-card {
-    flex: 1 1 300px; /* Flex grow, flex shrink, and flex basis */
+    flex: 0 1 calc(33.333% - 10px); /* Adjust for more cards per row or tighter spacing */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* This helps to align items inside the card */
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
     border: 1px solid #ddd;
+    background-color: #524d59;
     border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    /* Removed margin and width from here */
+    padding: 20px; /* Adjust padding for tighter content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px); /* Slightly less pronounced hover effect */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    color: #fbfff1; /* Overwrite adjusting text color */
 }
 
 .project-image {
-    width: 100%;
+    width: 100%; /* Ensure images fill the card */
     height: auto;
     border-radius: 8px;
 }
@@ -105,9 +173,78 @@ a:hover {
 .project-card a {
     display: inline-block;
     margin-top: 10px;
+    color: #007bff;
     text-decoration: none;
 }
 
 .project-card h3 {
-    margin-top: 0;
+    margin-top: 10px;
 }
+
+/* Adjustments for smaller screens */
+@media (max-width: 1024px) {
+    .project-card {
+        flex: 0 1 calc(50% - 10px); /* Adjust to 2 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 0 1 calc(100% - 10px); /* 1 card per row for very small screens */
+    }
+}
+
+.cv-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+}
+
+.cv-content {
+    display: flex;
+    flex-direction: column; /* Stack thumbnail and description vertically */
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cv-thumbnail {
+    flex-shrink: 0;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the transform */
+}
+
+.cv-thumbnail .cv-img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the transform */}
+
+.cv-thumbnail:hover .cv-img {
+    transform: scale(1.03); /* Enlarge the thumbnail on hover */
+}
+
+.cv-img {
+    width: 250px; /* Adjust based on your thumbnail size */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cv-description p {
+    color: #666;
+    font-size: 16px;
+    margin: 20px 0 0; /* Adjust margin for visual spacing */
+}
+
+@media (max-width: 768px) {
+    .cv-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cv-img {
+        width: 100px; /* Adjust for smaller screens */
+    }
+}
+
+

@@ -13,58 +13,60 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#cv">CV</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cv">CV</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>Driven, detail-oriented Data Scientist with a passion for emerging technologies. Utilizes relevant experience in machine learning and project management to develop integrated solutions. Particularly interested in AI safety and responsible AI.</p>
-    </section>
-
-    <section id="cv">
-        <h2>CV</h2>
-        <p>A brief overview of your CV or a link to download it.</p>
-        <a href="assets/cv.pdf" target="_blank">
-            <img src="images/cv-thumbnail.jpg" alt="CV Thumbnail" style="width:100px; height:auto;">
-        </a>
-        <p>Click on the thumbnail to view my CV.</p>
+        <div class="content-container">
+            <div class="profile-picture"></div> <!-- Profile picture -->
+            <div class="bio-box">
+                <h2>About Me</h2>
+                <p>Driven, detail-oriented Data Scientist with a passion for emerging technologies. Utilizes relevant experience in machine learning and project management to develop integrated solutions. Particularly interested in AI safety and responsible AI.</p>
+            </div>
+        </div>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
         <div class="projects-container">
-            <div class="project-card">
+            <a href="https://github.com/lucselmes/napster-to-spotify" target="_blank" class="project-card">
                 <img src="images/napster-to-spotify-thumbnail.jpg" alt="Spotify song converter" class="project-image">
                 <h3>Spotify song converter</h3>
                 <p>Tool to convert napster playlists to spotify playlists.</p>
-                <a href="https://github.com/lucselmes/napster-to-spotify" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-card">
+            </a>
+            <a href="https://github.com/lucselmes/linking-writing-processes" target="_blank" class="project-card">
                 <img src="images/linking-writing-processes-thumbnail.jpg" alt="Linking writing processes" class="project-image">
                 <h3>Linking writing processes to writing quality</h3>
                 <p>Kaggle competition on linking writing processes with writing quality.</p>
-                <a href="https://github.com/lucselmes/linking-writing-processes" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-card">
+            </a>
+            <a href="https://github.com/lucselmes/face-recognition" target="_blank" class="project-card">
                 <img src="images/face-recognition-thumbnail.jpg" alt="Face recognition project" class="project-image">
                 <h3>Face recognition for DIY security camera</h3>
                 <p>Currently working on a face recognition library that can be used in conjunction with a raspberry pi in order to make a DIY security camera with built-in face recognition.</p>
-                <a href="https://github.com/lucselmes/face-recognition" target="_blank">View on GitHub</a>
-            </div>
+            </a>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>If you have any questions, feel free to reach out to me:</p>
-        <p>Email: <a href="mailto:lselmes@gmail.com">lselmes@gmail.com</a></p>
-    </section>    
+    <section id="cv" class="cv-section">
+        <h2>CV</h2>
+        <div class="cv-content">
+            <div class="cv-thumbnail">
+                <a href="assets/cv.pdf" target="_blank">
+                    <img src="images/cv-thumbnail.jpg" alt="CV Thumbnail" class="cv-img">
+                </a>
+            </div>
+            <div class="cv-description">
+                <p>For a detailed overview of my professional experience, skills, and accomplishments, please view my full CV.</p>
+            </div>
+        </div>
+    </section>
+    
 
     <footer>
+        <p>Contact me at: <a href="mailto:lselmes@gmail.com">lselmes@gmail.com</a></p>
         <p>&copy; 2024 Luc Selmes</p>
     </footer>
 
