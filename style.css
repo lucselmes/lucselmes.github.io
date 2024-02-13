@@ -118,14 +118,21 @@ a:hover {
 }
 
 .profile-picture {
-    float: left;
-    width: 250px; /* Adjust size as needed */
-    height: 250px;
+    width: 15vw; /* 15% of the viewport width */
+    height: 15vw; /* Keep the height equal to the width to maintain aspect ratio */
     border-radius: 50%;
     background: url('images/profile-picture.jpg') no-repeat center center;
     background-size: cover;
-    margin-right: 20px; /* Adjust spacing between profile picture and bio box */
     margin-left: 100px;
+    margin-right: 20px;
+}
+
+/* Example media query for smaller screens */
+@media (max-width: 768px) {
+    .profile-picture {
+        width: 100px; /* Smaller size */
+        height: 100px;
+    }
 }
 
 .bio-box {
