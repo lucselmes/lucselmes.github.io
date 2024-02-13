@@ -2,13 +2,13 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0A192F; /* Dark blue background for overall body */
-    color: #FFFFFF; /* White text color */
+    background-color: #fbfff1; /* Light cream background */
+    color: #3c3744; /* Dark grey for text */
 }
 
-header {
-    background-color: #112240; /* A slightly different dark blue for the header */
-    color: #FFFFFF;
+header, footer {
+    background-color: #3c3744; /* Dark purple-grey */
+    color: #fbfff1; /* Cream text */
     padding: 20px;
     text-align: center;
     position: fixed;
@@ -28,14 +28,14 @@ nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
+nav ul li a, .project-card a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #090c9b;
     transition: color 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
-    color: #64ffda; /* Light teal for hover effect */
+nav ul li a:hover, .project-card a:hover {
+    color: #3066be; /* Brighter blue */
 }
 
 section {
@@ -45,24 +45,17 @@ section {
 
 /* Alternating section background colors */
 section:nth-of-type(odd) {
-    background-color: #112240; /* Dark blue for odd sections */
+    background-color: #b4c5e4; /* Dark blue for odd sections */
 }
 
 section:nth-of-type(even) {
-    background-color: #0A192F; /* Even darker blue for even sections */
+    background-color: #3066be; /* Even darker blue for even sections */
 }
 
 .project-card, .project-card a {
-    background-color: #0A192F; /* Ensuring project cards and links fit the color scheme */
-    color: #FFFFFF;
-    border-color: #2c2c2c; /* Slight border color for differentiation */
-}
-
-footer {
-    background-color: #112240;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 20px;
+    background-color: #b4c5e4; /* Ensuring project cards and links fit the color scheme */
+    color: #3c3744;
+    border-color: #fbfff1; /* Slight border color for differentiation */
 }
 
 a:hover {
@@ -89,12 +82,6 @@ a:hover {
 }
 
 .project-image {
-    width: 100%; /* Ensure images fill the card */
-    height: auto;
-    border-radius: 8px;
-}
-
-.project-image {
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -103,7 +90,6 @@ a:hover {
 .project-card a {
     display: inline-block;
     margin-top: 10px;
-    color: #007bff;
     text-decoration: none;
 }
 
