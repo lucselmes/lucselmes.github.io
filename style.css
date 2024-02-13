@@ -101,7 +101,7 @@ a:hover {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -119,8 +119,8 @@ a:hover {
 }
 
 .profile-picture-container {
-    flex: 0 0 200px; /* Adjust the fixed size as needed */
-    height: 200px; /* Ensure the container has a defined height */
+    flex: 0 0 250px; /* Adjust the fixed size as needed */
+    height: 250px; /* Ensure the container has a defined height */
     margin-right: 20px; /* Space between the profile picture and the bio box */
     margin-left: 20px;
     border-radius: 50%;
