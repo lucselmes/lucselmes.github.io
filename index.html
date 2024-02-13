@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -65,5 +65,22 @@
         <p>&copy; 2024 Luc Selmes</p>
     </footer>
 
+    <script>
+        $(document).ready(function() {
+            var lastScrollTop = 0;
+            var $header = $('header');
+            $(window).scroll(function() {
+                var currentScroll = $(this).scrollTop();
+                if (currentScroll > lastScrollTop && currentScroll > $header.outerHeight()) {
+                    // Scrolling down
+                    $header.css('top', -$header.outerHeight() + 'px');
+                } else {
+                    // Scrolling up
+                    $header.css('top', '0');
+                }
+                lastScrollTop = currentScroll;
+            });
+        });
+    </script>
 </body>
 </html>
