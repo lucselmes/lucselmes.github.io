@@ -1,14 +1,22 @@
+
+/* Color palette
+#3c3744
+#090c9b
+#3066be
+#b4c5e4
+#fbfff1
+*/
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fbfff1; /* Light cream background */
-    color: #3c3744; /* Dark grey for text */
+    background-color: #fbfff1; 
+    color: #3c3744; /* Off-white text color */
 }
 
-header, footer {
-    background-color: #3c3744; /* Dark purple-grey */
-    color: #fbfff1; /* Cream text */
+header {
+    background-color: #3c3744;
+    color: #fbfff1;
     padding: 20px;
     text-align: center;
     position: fixed;
@@ -28,14 +36,14 @@ nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a, .project-card a {
+nav ul li a {
     text-decoration: none;
-    color: #090c9b;
+    color: #fbfff1;
     transition: color 0.3s ease-in-out;
 }
 
-nav ul li a:hover, .project-card a:hover {
-    color: #3066be; /* Brighter blue */
+nav ul li a:hover {
+    color: #b4c5e4;
 }
 
 section {
@@ -45,17 +53,24 @@ section {
 
 /* Alternating section background colors */
 section:nth-of-type(odd) {
-    background-color: #b4c5e4; /* Dark blue for odd sections */
+    background-color: #b4c5e4;
 }
 
 section:nth-of-type(even) {
-    background-color: #3066be; /* Even darker blue for even sections */
+    background-color: #3066be; 
 }
 
 .project-card, .project-card a {
     background-color: #b4c5e4; /* Ensuring project cards and links fit the color scheme */
-    color: #3c3744;
-    border-color: #fbfff1; /* Slight border color for differentiation */
+    color: #fbfff1;
+    border-color: #d2dbed; /* Slight border color for differentiation */
+}
+
+footer {
+    background-color: #3c3744;
+    color: #fbfff1;
+    text-align: center;
+    padding: 20px;
 }
 
 a:hover {
