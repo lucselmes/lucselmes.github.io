@@ -9,7 +9,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -89,8 +88,8 @@ a:hover {
     position: relative;
     color: white;
     text-align: left;
-    padding: 100px 0; /* This ensures some height, adjust as needed */
-    overflow: hidden; /* Clips the pseudo-element to the section's bounds */
+    padding: 100px 0;
+    overflow: hidden;
 }
 
 #about::before {
@@ -106,12 +105,10 @@ a:hover {
 
 .content-container, .profile-picture, .bio-box {
     position: relative;
-    z-index: 1; /* Ensures content is above the background */
+    z-index: 1;
 }
 
-
 .content-container {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,20 +122,20 @@ a:hover {
     width: 100%;
     height: 100%;
     background: url('images/background-image.jpg') no-repeat center center;
-    background-size: covert;
-    filter: grayscale(15%); /* Greys out the background image */
-    opacity: 0.5; /* Adjust for desired transparency level */
-    z-index: -1; /* Ensures the background is behind the content */
+    background-size: cover;
+    filter: grayscale(15%);
+    opacity: 0.5;
+    z-index: -1;
 }
 
 .profile-picture-container {
-    flex: 0 0 250px; /* Adjust the fixed size as needed */
-    height: 250px; /* Ensure the container has a defined height */
-    margin-right: 20px; /* Space between the profile picture and the bio box */
+    flex: 0 0 250px;
+    height: 250px;
+    margin-right: 20px;
     margin-left: 20px;
     border-radius: 50%;
     overflow: hidden;
-    position: relative; /* Keep it relative if it doesn't need to be absolutely positioned */
+    position: relative;
 }
 
 .profile-picture {
@@ -148,18 +145,41 @@ a:hover {
     width: 100%;
     height: 100%;
     background: url('images/profile-picture.jpg') no-repeat center center;
-    background-size: cover; /* Ensures image covers the area without distortion */
-    border-radius: 50%; /* Ensures the image itself is also circular, matching the container */
+    background-size: cover;
+    border-radius: 50%;
 }
 
 .bio-box {
     flex: 1;
-    background-color: #fbfff1c8; /* Optional: Adds readability background to the bio */
+    background-color: #fbfff1c8;
     color: #3c3744;
-    border-radius: 8px; /* Optional: Rounds the corners of the bio box */
+    border-radius: 8px;
     padding: 0 20px;
     margin-left: 20px;
-    max-width: 700px; /* Adjust width as needed */
+    max-width: 700px;
+}
+
+@media (max-width: 1200px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-picture-container {
+        width: 250px; /* Maintain a fixed width */
+        height: 250px; /* Maintain a fixed height to ensure circular shape */
+        margin: 0 auto 20px;
+    }
+
+    .profile-picture {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bio-box {
+        margin: 0 auto;
+        width: 90%;
+    }
 }
 
 .projects-container {
