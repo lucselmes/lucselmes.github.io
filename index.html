@@ -15,6 +15,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +37,7 @@
         </div>
     </section>
     
-    <section id="projects">
+    <section id="projects" class="projects-section">
         <h2>Projects</h2>
         <div class="projects-container">
             <a href="https://github.com/lucselmes/napster-to-spotify" target="_blank" class="project-card">
@@ -60,20 +61,20 @@
     <section id="cv" class="cv-section">
         <h2>CV</h2>
         <div class="cv-content">
+            <div class="cv-description">
+                <p>For a detailed overview of my professional experience, skills, and accomplishments, please view my full CV.</p>
+            </div>
             <div class="cv-thumbnail">
                 <a href="assets/cv.pdf" target="_blank">
                     <img src="images/cv-thumbnail.jpg" alt="CV Thumbnail" class="cv-img">
                 </a>
             </div>
-            <div class="cv-description">
-                <p>For a detailed overview of my professional experience, skills, and accomplishments, please view my full CV.</p>
-            </div>
         </div>
     </section>
     
 
-    <footer>
-        <p>Contact me at: <a href="mailto:lselmes@gmail.com">lselmes@gmail.com</a></p>
+    <footer id="contact">
+        <p id="emailHighlight">Contact me at: <a href="mailto:lselmes@gmail.com">lselmes@gmail.com</a></p>
         <p>&copy; 2024 Luc Selmes</p>
     </footer>
 
@@ -92,7 +93,17 @@
                 }
                 lastScrollTop = currentScroll;
             });
+        
+            // Highlight email on "Contact Me" click
+            $('a[href="#contact"]').click(function() {
+                $('#emailHighlight').addClass('highlight');
+        
+                // Optional: Remove highlight after a few seconds
+                setTimeout(function() {
+                    $('#emailHighlight').removeClass('highlight');
+                }, 3000); // Highlight for 3 seconds
+            });
         });
-    </script>
+        </script>        
 </body>
 </html>

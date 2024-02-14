@@ -71,6 +71,26 @@ footer {
     padding: 20px;
 }
 
+#emailHighlight {
+    transition: background-color 0.7s ease, color 0.7s ease, padding 0.7s ease;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+#emailHighlight.highlight {
+    background-color: #fbfff1; /* Light grey background */
+    color: #3c3744; /* Dark text color */
+    padding: 10px 10px 10px 10px;
+}
+
+/* Ensures the link stands out */
+#emailHighlight.highlight a {
+    color: #79b6f6; /* Change the color to something more noticeable if needed */
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.7s ease;
+}
+
 footer a {
     color: #fbfff1; /* A light blue color for links for a pop of color */
     text-decoration: none; /* Optional: removes underline from links */
@@ -182,6 +202,16 @@ a:hover {
     }
 }
 
+.projects-section {
+    text-align: center;
+    margin-top: 0px
+}
+
+.projects-section h2 {
+    margin-bottom: 50px;
+    margin-top: 5px;
+}
+
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -271,7 +301,7 @@ a:hover {
 }
 
 .cv-img {
-    width: 250px; /* Adjust based on your thumbnail size */
+    width: 350px; /* Adjust based on your thumbnail size */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -280,7 +310,7 @@ a:hover {
 .cv-description p {
     color: #666;
     font-size: 16px;
-    margin: 20px 0 0; /* Adjust margin for visual spacing */
+    margin: 10px 0 20px; /* Adjust margin for visual spacing */
 }
 
 @media (max-width: 768px) {
@@ -290,7 +320,8 @@ a:hover {
     }
 
     .cv-img {
-        width: 100px; /* Adjust for smaller screens */
+        width: 350px; /* Adjust for smaller screens */
+        height: auto;
     }
 }
 
