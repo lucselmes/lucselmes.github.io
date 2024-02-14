@@ -105,10 +105,11 @@ a:hover {
 }
 
 #about {
+    margin-top: 0;
     position: relative;
     color: white;
     text-align: left;
-    padding: 100px 0;
+    padding: 140px 0 100px;
     overflow: hidden;
 }
 
